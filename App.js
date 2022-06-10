@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import background from './assets/callBackground.jpg'
 import CallNumberInput from './src/components/CallNumberInput';
 import Numberpad from './src/components/Numberpad';
+import ToolBar from './src/components/ToolBar';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <ImageBackground source={background} style={styles.image} blurRadius={50}>
         <CallNumberInput/>
         <Numberpad/>
+        <ToolBar/>
       </ImageBackground>
     </View>
   );
@@ -27,6 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: 'center',
+    justifyContent: 'space-around'
   },
   text: {
     color: "white",
